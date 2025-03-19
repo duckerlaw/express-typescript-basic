@@ -4,6 +4,7 @@ import express from "express";
 // ทำการ import Routes มาใช้งาน
 import testRoutes from "./routes/testRoutes";
 import productRoutes from "./routes/productRoutes";
+import dbtestRoutes from "./routes/dbtestRoutes";
 
 // create an instance of express
 const app = express();
@@ -14,6 +15,7 @@ app.use(express.json());
 // ใช้งาน testRoutes ที่เรา import มา
 app.use('/api', testRoutes);
 app.use('/api',productRoutes);
+app.use('/api',dbtestRoutes);
 
 // รัน server ที่ port 3000
 app.listen(3001, () => {
